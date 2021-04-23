@@ -22,7 +22,7 @@ details = handler.getDetails(str(ip_address))
 county_name = details.country_name
 # st.write(county_name)
 
-# Creating Title
+### Creating Title ###
 st.title(
     """
     Covid Tracker
@@ -68,8 +68,13 @@ st.sidebar.subheader("Select Country")
 selected_country = st.sidebar.selectbox("Country:", country, index=i)
 
 ### Getting Additional Covid Data For Visualization and Prediction ###
-url = "https://covid.ourworldindata.org/data/owid-covid-data.csv"
-db = pd.read_csv(url)
+### Caching Data ###
+@st.cache(suppress_st_warning=True)
+def extra_data():
+    url = "https://covid.ourworldindata.org/data/owid-covid-data.csv"
+    db = pd.read_csv(url)
+    return db
+db = extra_data()
 world = db[db["location"] == "World"]
 country = db[db["location"] == selected_country.capitalize()]
 world_total = world[["location", "date", "total_cases", "total_deaths"]]
