@@ -14,7 +14,7 @@ from sklearn.preprocessing import PolynomialFeatures
 try:
     ext_ip = urllib.request.urlopen('https://ident.me').read().decode('utf8')
     ### Geting Location ###
-    ip = requests.request('GET', 'http://myip.dnsomatic.com').text
+    ip = requests.get('https://api64.ipify.org').text
     ip_url = f"https://reallyfreegeoip.org/json/{ip}"
     r = requests.get(ip_url)
     ip_details = r.json()
