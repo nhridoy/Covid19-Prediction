@@ -14,7 +14,8 @@ from sklearn.preprocessing import PolynomialFeatures
 try:
     ext_ip = urllib.request.urlopen('https://ident.me').read().decode('utf8')
     ### Geting Location ###
-    ip_url = f"https://reallyfreegeoip.org/json/{ext_ip}"
+    ip = requests.get('https://api64.ipify.org').text
+    ip_url = f"https://reallyfreegeoip.org/json/{ip}"
     r = requests.get(ip_url)
     ip_details = r.json()
     county_name = ip_details["country_name"]
