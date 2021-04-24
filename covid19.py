@@ -15,10 +15,10 @@ try:
     ### Geting Location ###
     location = geocoder.ip("me")
     ip_address = location.ip
-    ip_url = f"https://reallyfreegeoip.org/json/{ip_address}"
+    ip_url = f"https://api.ipgeolocationapi.com/geolocate/{ip_address}"
     r = requests.get(ip_url)
     ip_details = r.json()
-    county_name = ip_details["country_name"]
+    county_name = ip_details["name"]
     # st.write(county_name)
 
     ### Creating Title ###
