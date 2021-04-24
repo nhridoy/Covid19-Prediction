@@ -3,7 +3,7 @@ numpy
 matplotlib
 covid
 geocoder
-ipinfo
+streamlit
 plotly
 requests
 sklearn
