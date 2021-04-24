@@ -5,6 +5,6 @@ matplotlib
 covid
 geocoder
 ipinfo
-iplotly
+plotly
 requests
 sklearn
