@@ -21,7 +21,7 @@ try:
     ip_details = r.json()
     county_name = ip_details["country_name"]
     # st.write(county_name)
-    st.write(r)
+    st.write(ip_details)
     ### Creating Title ###
     st.title(
         """
