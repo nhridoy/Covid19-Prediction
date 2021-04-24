@@ -1,6 +1,5 @@
 pandas
 numpy
-streamlit
 matplotlib
 covid
 geocoder
