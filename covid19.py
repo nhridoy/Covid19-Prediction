@@ -16,12 +16,11 @@ try:
     ### Geting Location ###
     ip = requests.get('https://api64.ipify.org').text
     ip_url = f"https://reallyfreegeoip.org/json/{ip}"
-
     r = requests.get(ip_url)
     ip_details = r.json()
     county_name = ip_details["country_name"]
     # st.write(county_name)
-    st.write(ip_details)
+
     ### Creating Title ###
     st.title(
         """
