@@ -1,3 +1,10 @@
-ipympl
 pandas
 numpy
+streamlit
+matplotlib
+covid
+geocoder
+ipinfo
+iplotly
+requests
+sklearn
