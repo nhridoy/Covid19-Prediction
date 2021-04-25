@@ -172,7 +172,7 @@ try:
     world_country = [world_total, country_total]
     world_country = pd.concat(world_country)
     fig = px.line(world_country, x="date", y="total_cases", title='Total Cases World and Country', color='location')
-    st.write(fig)
+    st.plotly_chart(fig, use_container_width=True)
 
     ### Display Country Data ###
     output(selected_country.upper(), country_total_recovered, country_total_cases, country_cases_new,
