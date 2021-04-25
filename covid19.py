@@ -68,7 +68,7 @@ try:
 
     ### Getting Additional Covid Data For Visualization and Prediction ###
     ### Caching Data ###
-    @st.cache(suppress_st_warning=True)
+    # @st.cache(suppress_st_warning=True)
     def extra_data():
         url = "https://covid.ourworldindata.org/data/owid-covid-data.csv"
         db = pd.read_csv(url)
