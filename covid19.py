@@ -71,8 +71,7 @@ try:
     # @st.cache(suppress_st_warning=True)
     def extra_data():
         url = "https://covid.ourworldindata.org/data/owid-covid-data.csv"
-        db = pd.read_csv(url)
-        return db
+        return pd.read_csv(url)
 
 
     db = extra_data()
